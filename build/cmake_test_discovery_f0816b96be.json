@@ -1,0 +1,58 @@
+{
+  "tests": 8,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "MakeSumTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "IdenticalSum",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 4
+        },
+        {
+          "name": "Cancellation",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 20
+        },
+        {
+          "name": "BasicSum",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 36
+        },
+        {
+          "name": "MultipleSums",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 55
+        }
+      ]
+    },
+    {
+      "name": "MakeProductTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "SimpleProduct",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 76
+        },
+        {
+          "name": "NullProducts",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 95
+        },
+        {
+          "name": "ProductDistribution",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 111
+        },
+        {
+          "name": "MultipleSums",
+          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 140
+        }
+      ]
+    }
+  ]
+}

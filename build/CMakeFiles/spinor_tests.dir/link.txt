@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o -o spinor_tests  lib/libgtest_main.a lib/libgtest.a

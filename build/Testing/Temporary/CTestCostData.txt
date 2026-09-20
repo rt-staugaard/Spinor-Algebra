@@ -1,0 +1,12 @@
+MakeSumTest.BasicReduction 6 0.00130307
+MakeProductTest.BasicFeatures 0 0
+MakeSumTest.IdenticalSum 15 0.000450553
+MakeSumTest.Cancellation 15 0.000386367
+MakeSumTest.BasicSum 15 0.000363853
+MakeSumTest.MultipleSums 15 0.000362308
+MakeProductTest.SimpleProduct 14 0.000371042
+MakeProductTest.NullProducts 11 0.000459864
+MakeProductTest.CompoundProduct 1 0.0052815
+MakeProductTest.ProductDistribution 7 0.000705679
+MakeProductTest.MultipleSums 3 0.00170108
+---
