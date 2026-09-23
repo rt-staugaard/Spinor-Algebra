@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rasat1/Documents/code/projects/spinor_algebra
+CMAKE_SOURCE_DIR = /Users/rasat1/Documents/code/spinor_algebra
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rasat1/Documents/code/projects/spinor_algebra/build
+CMAKE_BINARY_DIR = /Users/rasat1/Documents/code/spinor_algebra/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/spinor_tests.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/spinor_tests.dir/codegen:
 .PHONY : CMakeFiles/spinor_tests.dir/codegen
 
 CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: CMakeFiles/spinor_tests.dir/flags.make
-CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: /Users/rasat1/Documents/code/projects/spinor_algebra/tests/spinor_test.cpp
+CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: /Users/rasat1/Documents/code/spinor_algebra/tests/spinor_test.cpp
 CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: CMakeFiles/spinor_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o -MF CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o.d -o CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o -c /Users/rasat1/Documents/code/projects/spinor_algebra/tests/spinor_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o -MF CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o.d -o CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o -c /Users/rasat1/Documents/code/spinor_algebra/tests/spinor_test.cpp
 
 CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rasat1/Documents/code/projects/spinor_algebra/tests/spinor_test.cpp > CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rasat1/Documents/code/spinor_algebra/tests/spinor_test.cpp > CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.i
 
 CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasat1/Documents/code/projects/spinor_algebra/tests/spinor_test.cpp -o CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rasat1/Documents/code/spinor_algebra/tests/spinor_test.cpp -o CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.s
 
 # Object files for target spinor_tests
 spinor_tests_OBJECTS = \
@@ -98,9 +98,9 @@ spinor_tests: CMakeFiles/spinor_tests.dir/build.make
 spinor_tests: lib/libgtest_main.a
 spinor_tests: lib/libgtest.a
 spinor_tests: CMakeFiles/spinor_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable spinor_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable spinor_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spinor_tests.dir/link.txt --verbose=$(VERBOSE)
-	/opt/homebrew/bin/cmake -D TEST_TARGET=spinor_tests -D TEST_EXECUTABLE=/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/rasat1/Documents/code/projects/spinor_algebra/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=spinor_tests_TESTS -D CTEST_FILE=/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
+	/opt/homebrew/bin/cmake -D TEST_TARGET=spinor_tests -D TEST_EXECUTABLE=/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/rasat1/Documents/code/spinor_algebra/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=spinor_tests_TESTS -D CTEST_FILE=/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /opt/homebrew/share/cmake/Modules/GoogleTestAddTests.cmake
 
 # Rule to build all files generated by this target.
 CMakeFiles/spinor_tests.dir/build: spinor_tests
@@ -111,6 +111,6 @@ CMakeFiles/spinor_tests.dir/clean:
 .PHONY : CMakeFiles/spinor_tests.dir/clean
 
 CMakeFiles/spinor_tests.dir/depend:
-	cd /Users/rasat1/Documents/code/projects/spinor_algebra/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/rasat1/Documents/code/projects/spinor_algebra /Users/rasat1/Documents/code/projects/spinor_algebra /Users/rasat1/Documents/code/projects/spinor_algebra/build /Users/rasat1/Documents/code/projects/spinor_algebra/build /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles/spinor_tests.dir/DependInfo.cmake "--color=$(COLOR)" spinor_tests
+	cd /Users/rasat1/Documents/code/spinor_algebra/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/rasat1/Documents/code/spinor_algebra /Users/rasat1/Documents/code/spinor_algebra /Users/rasat1/Documents/code/spinor_algebra/build /Users/rasat1/Documents/code/spinor_algebra/build /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles/spinor_tests.dir/DependInfo.cmake "--color=$(COLOR)" spinor_tests
 .PHONY : CMakeFiles/spinor_tests.dir/depend
 

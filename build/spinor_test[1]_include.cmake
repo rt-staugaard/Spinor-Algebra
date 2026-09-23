@@ -1,5 +1,0 @@
-if(EXISTS "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_test[1]_tests.cmake")
-  include("/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_test[1]_tests.cmake")
-else()
-  add_test(spinor_test_NOT_BUILT spinor_test_NOT_BUILT)
-endif()

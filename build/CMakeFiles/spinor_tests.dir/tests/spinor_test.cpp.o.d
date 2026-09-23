@@ -1,6 +1,6 @@
 CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/tests/spinor_test.cpp \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
+  /Users/rasat1/Documents/code/spinor_algebra/tests/spinor_test.cpp \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -984,17 +984,17 @@ CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/map.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/stat.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/unistd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h \
@@ -1013,11 +1013,11 @@ CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_token.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/float.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/float.h \
@@ -1025,23 +1025,23 @@ CMakeFiles/spinor_tests.dir/tests/spinor_test.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/__float_float.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include/__float_infinity_nan.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cxxabi.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__cxxabi_config.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
-  /Users/rasat1/Documents/code/projects/spinor_algebra/tests/../lib/spinor_tree_arithmetic.hpp \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+  /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
+  /Users/rasat1/Documents/code/spinor_algebra/tests/../lib/spinor_tree_arithmetic.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \

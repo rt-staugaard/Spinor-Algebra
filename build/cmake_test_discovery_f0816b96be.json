@@ -1,5 +1,5 @@
 {
-  "tests": 8,
+  "tests": 19,
   "name": "AllTests",
   "testsuites": [
     {
@@ -8,23 +8,23 @@
       "testsuite": [
         {
           "name": "IdenticalSum",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
           "line": 4
         },
         {
           "name": "Cancellation",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 20
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 18
         },
         {
           "name": "BasicSum",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 36
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 32
         },
         {
           "name": "MultipleSums",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 55
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 49
         }
       ]
     },
@@ -34,23 +34,90 @@
       "testsuite": [
         {
           "name": "SimpleProduct",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 76
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 68
         },
         {
           "name": "NullProducts",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 95
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 85
         },
         {
           "name": "ProductDistribution",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 111
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 99
         },
         {
           "name": "MultipleSums",
-          "file": "\/Users\/rasat1\/Documents\/code\/projects\/spinor_algebra\/tests\/spinor_test.cpp",
-          "line": 140
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 126
+        }
+      ]
+    },
+    {
+      "name": "MakeFractionTest",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "TrivialFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 154
+        },
+        {
+          "name": "SimpleFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 168
+        },
+        {
+          "name": "SumFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 186
+        },
+        {
+          "name": "FractionWithSum",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 209
+        },
+        {
+          "name": "SumOfFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 246
+        },
+        {
+          "name": "FractionCollection",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 275
+        },
+        {
+          "name": "DoubleFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 298
+        },
+        {
+          "name": "MassiveReduction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 327
+        }
+      ]
+    },
+    {
+      "name": "EdgeCases",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "AdditiveIdentityAndZeroPruning",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 347
+        },
+        {
+          "name": "FractionOverFraction",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 373
+        },
+        {
+          "name": "ComplexSumCancellationToZero",
+          "file": "\/Users\/rasat1\/Documents\/code\/spinor_algebra\/tests\/spinor_test.cpp",
+          "line": 390
         }
       ]
     }

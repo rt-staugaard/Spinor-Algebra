@@ -1,19 +1,18 @@
-Start testing: Sep 20 12:15 CEST
+Start testing: Sep 23 20:49 CEST
 ----------------------------------------------------------
-1/8 Testing: MakeSumTest.IdenticalSum
-1/8 Test: MakeSumTest.IdenticalSum
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.IdenticalSum" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeSumTest.IdenticalSum" start time: Sep 20 12:15 CEST
+1/19 Testing: MakeSumTest.IdenticalSum
+1/19 Test: MakeSumTest.IdenticalSum
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.IdenticalSum" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeSumTest.IdenticalSum" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeSumTest.IdenticalSum
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeSumTest
 [ RUN      ] MakeSumTest.IdenticalSum
-2*<3 1>
 [       OK ] MakeSumTest.IdenticalSum (0 ms)
 [----------] 1 test from MakeSumTest (0 ms total)
 
@@ -24,24 +23,23 @@ Note: Google Test filter = MakeSumTest.IdenticalSum
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeSumTest.IdenticalSum" end time: Sep 20 12:15 CEST
+"MakeSumTest.IdenticalSum" end time: Sep 23 20:49 CEST
 "MakeSumTest.IdenticalSum" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/8 Testing: MakeSumTest.Cancellation
-2/8 Test: MakeSumTest.Cancellation
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.Cancellation" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeSumTest.Cancellation" start time: Sep 20 12:15 CEST
+2/19 Testing: MakeSumTest.Cancellation
+2/19 Test: MakeSumTest.Cancellation
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.Cancellation" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeSumTest.Cancellation" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeSumTest.Cancellation
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeSumTest
 [ RUN      ] MakeSumTest.Cancellation
-0
 [       OK ] MakeSumTest.Cancellation (0 ms)
 [----------] 1 test from MakeSumTest (0 ms total)
 
@@ -52,24 +50,23 @@ Note: Google Test filter = MakeSumTest.Cancellation
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeSumTest.Cancellation" end time: Sep 20 12:15 CEST
+"MakeSumTest.Cancellation" end time: Sep 23 20:49 CEST
 "MakeSumTest.Cancellation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/8 Testing: MakeSumTest.BasicSum
-3/8 Test: MakeSumTest.BasicSum
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.BasicSum" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeSumTest.BasicSum" start time: Sep 20 12:15 CEST
+3/19 Testing: MakeSumTest.BasicSum
+3/19 Test: MakeSumTest.BasicSum
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.BasicSum" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeSumTest.BasicSum" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeSumTest.BasicSum
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeSumTest
 [ RUN      ] MakeSumTest.BasicSum
-(<3 1> + <4 2>)
 [       OK ] MakeSumTest.BasicSum (0 ms)
 [----------] 1 test from MakeSumTest (0 ms total)
 
@@ -80,24 +77,23 @@ Note: Google Test filter = MakeSumTest.BasicSum
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeSumTest.BasicSum" end time: Sep 20 12:15 CEST
+"MakeSumTest.BasicSum" end time: Sep 23 20:49 CEST
 "MakeSumTest.BasicSum" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/8 Testing: MakeSumTest.MultipleSums
-4/8 Test: MakeSumTest.MultipleSums
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.MultipleSums" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeSumTest.MultipleSums" start time: Sep 20 12:15 CEST
+4/19 Testing: MakeSumTest.MultipleSums
+4/19 Test: MakeSumTest.MultipleSums
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeSumTest.MultipleSums" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeSumTest.MultipleSums" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeSumTest.MultipleSums
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeSumTest
 [ RUN      ] MakeSumTest.MultipleSums
-(2*<3 1> + -1*[3 2])
 [       OK ] MakeSumTest.MultipleSums (0 ms)
 [----------] 1 test from MakeSumTest (0 ms total)
 
@@ -108,24 +104,23 @@ Note: Google Test filter = MakeSumTest.MultipleSums
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeSumTest.MultipleSums" end time: Sep 20 12:15 CEST
+"MakeSumTest.MultipleSums" end time: Sep 23 20:49 CEST
 "MakeSumTest.MultipleSums" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/8 Testing: MakeProductTest.SimpleProduct
-5/8 Test: MakeProductTest.SimpleProduct
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.SimpleProduct" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeProductTest.SimpleProduct" start time: Sep 20 12:15 CEST
+5/19 Testing: MakeProductTest.SimpleProduct
+5/19 Test: MakeProductTest.SimpleProduct
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.SimpleProduct" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeProductTest.SimpleProduct" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeProductTest.SimpleProduct
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeProductTest
 [ RUN      ] MakeProductTest.SimpleProduct
-4*<4 1>[1 0]
 [       OK ] MakeProductTest.SimpleProduct (0 ms)
 [----------] 1 test from MakeProductTest (0 ms total)
 
@@ -136,24 +131,23 @@ Note: Google Test filter = MakeProductTest.SimpleProduct
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeProductTest.SimpleProduct" end time: Sep 20 12:15 CEST
+"MakeProductTest.SimpleProduct" end time: Sep 23 20:49 CEST
 "MakeProductTest.SimpleProduct" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/8 Testing: MakeProductTest.NullProducts
-6/8 Test: MakeProductTest.NullProducts
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.NullProducts" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeProductTest.NullProducts" start time: Sep 20 12:15 CEST
+6/19 Testing: MakeProductTest.NullProducts
+6/19 Test: MakeProductTest.NullProducts
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.NullProducts" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeProductTest.NullProducts" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeProductTest.NullProducts
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeProductTest
 [ RUN      ] MakeProductTest.NullProducts
-0
 [       OK ] MakeProductTest.NullProducts (0 ms)
 [----------] 1 test from MakeProductTest (0 ms total)
 
@@ -164,24 +158,23 @@ Note: Google Test filter = MakeProductTest.NullProducts
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeProductTest.NullProducts" end time: Sep 20 12:15 CEST
+"MakeProductTest.NullProducts" end time: Sep 23 20:49 CEST
 "MakeProductTest.NullProducts" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/8 Testing: MakeProductTest.ProductDistribution
-7/8 Test: MakeProductTest.ProductDistribution
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.ProductDistribution" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeProductTest.ProductDistribution" start time: Sep 20 12:15 CEST
+7/19 Testing: MakeProductTest.ProductDistribution
+7/19 Test: MakeProductTest.ProductDistribution
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.ProductDistribution" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeProductTest.ProductDistribution" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeProductTest.ProductDistribution
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeProductTest
 [ RUN      ] MakeProductTest.ProductDistribution
-(6*<4 1>[1 0] + -2*<4 1>[3 2])
 [       OK ] MakeProductTest.ProductDistribution (0 ms)
 [----------] 1 test from MakeProductTest (0 ms total)
 
@@ -189,27 +182,26 @@ Note: Google Test filter = MakeProductTest.ProductDistribution
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeProductTest.ProductDistribution" end time: Sep 20 12:15 CEST
+"MakeProductTest.ProductDistribution" end time: Sep 23 20:49 CEST
 "MakeProductTest.ProductDistribution" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/8 Testing: MakeProductTest.MultipleSums
-8/8 Test: MakeProductTest.MultipleSums
-Command: "/Users/rasat1/Documents/code/projects/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.MultipleSums" "--gtest_also_run_disabled_tests"
-Directory: /Users/rasat1/Documents/code/projects/spinor_algebra/build
-"MakeProductTest.MultipleSums" start time: Sep 20 12:15 CEST
+8/19 Testing: MakeProductTest.MultipleSums
+8/19 Test: MakeProductTest.MultipleSums
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeProductTest.MultipleSums" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeProductTest.MultipleSums" start time: Sep 23 20:49 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = MakeProductTest.MultipleSums
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from MakeProductTest
 [ RUN      ] MakeProductTest.MultipleSums
-(-1*<3 0><4 1> + <3 0>[1 0] + -1*<4 1>[3 2] + [1 0][3 2])
 [       OK ] MakeProductTest.MultipleSums (0 ms)
 [----------] 1 test from MakeProductTest (0 ms total)
 
@@ -220,8 +212,305 @@ Note: Google Test filter = MakeProductTest.MultipleSums
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MakeProductTest.MultipleSums" end time: Sep 20 12:15 CEST
+"MakeProductTest.MultipleSums" end time: Sep 23 20:49 CEST
 "MakeProductTest.MultipleSums" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 20 12:15 CEST
+9/19 Testing: MakeFractionTest.TrivialFraction
+9/19 Test: MakeFractionTest.TrivialFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.TrivialFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.TrivialFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.TrivialFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.TrivialFraction
+[       OK ] MakeFractionTest.TrivialFraction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.TrivialFraction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.TrivialFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/19 Testing: MakeFractionTest.SimpleFraction
+10/19 Test: MakeFractionTest.SimpleFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.SimpleFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.SimpleFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.SimpleFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.SimpleFraction
+[       OK ] MakeFractionTest.SimpleFraction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.SimpleFraction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.SimpleFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/19 Testing: MakeFractionTest.SumFraction
+11/19 Test: MakeFractionTest.SumFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.SumFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.SumFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.SumFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.SumFraction
+[       OK ] MakeFractionTest.SumFraction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.SumFraction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.SumFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/19 Testing: MakeFractionTest.FractionWithSum
+12/19 Test: MakeFractionTest.FractionWithSum
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.FractionWithSum" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.FractionWithSum" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.FractionWithSum
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.FractionWithSum
+[       OK ] MakeFractionTest.FractionWithSum (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.FractionWithSum" end time: Sep 23 20:49 CEST
+"MakeFractionTest.FractionWithSum" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/19 Testing: MakeFractionTest.SumOfFraction
+13/19 Test: MakeFractionTest.SumOfFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.SumOfFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.SumOfFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.SumOfFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.SumOfFraction
+[       OK ] MakeFractionTest.SumOfFraction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.SumOfFraction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.SumOfFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/19 Testing: MakeFractionTest.FractionCollection
+14/19 Test: MakeFractionTest.FractionCollection
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.FractionCollection" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.FractionCollection" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.FractionCollection
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.FractionCollection
+[       OK ] MakeFractionTest.FractionCollection (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.FractionCollection" end time: Sep 23 20:49 CEST
+"MakeFractionTest.FractionCollection" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/19 Testing: MakeFractionTest.DoubleFraction
+15/19 Test: MakeFractionTest.DoubleFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.DoubleFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.DoubleFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.DoubleFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.DoubleFraction
+[       OK ] MakeFractionTest.DoubleFraction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.DoubleFraction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.DoubleFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/19 Testing: MakeFractionTest.MassiveReduction
+16/19 Test: MakeFractionTest.MassiveReduction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=MakeFractionTest.MassiveReduction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"MakeFractionTest.MassiveReduction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = MakeFractionTest.MassiveReduction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MakeFractionTest
+[ RUN      ] MakeFractionTest.MassiveReduction
+[       OK ] MakeFractionTest.MassiveReduction (0 ms)
+[----------] 1 test from MakeFractionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MakeFractionTest.MassiveReduction" end time: Sep 23 20:49 CEST
+"MakeFractionTest.MassiveReduction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/19 Testing: EdgeCases.AdditiveIdentityAndZeroPruning
+17/19 Test: EdgeCases.AdditiveIdentityAndZeroPruning
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=EdgeCases.AdditiveIdentityAndZeroPruning" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"EdgeCases.AdditiveIdentityAndZeroPruning" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = EdgeCases.AdditiveIdentityAndZeroPruning
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EdgeCases
+[ RUN      ] EdgeCases.AdditiveIdentityAndZeroPruning
+[       OK ] EdgeCases.AdditiveIdentityAndZeroPruning (0 ms)
+[----------] 1 test from EdgeCases (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EdgeCases.AdditiveIdentityAndZeroPruning" end time: Sep 23 20:49 CEST
+"EdgeCases.AdditiveIdentityAndZeroPruning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/19 Testing: EdgeCases.FractionOverFraction
+18/19 Test: EdgeCases.FractionOverFraction
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=EdgeCases.FractionOverFraction" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"EdgeCases.FractionOverFraction" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = EdgeCases.FractionOverFraction
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EdgeCases
+[ RUN      ] EdgeCases.FractionOverFraction
+[       OK ] EdgeCases.FractionOverFraction (0 ms)
+[----------] 1 test from EdgeCases (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"EdgeCases.FractionOverFraction" end time: Sep 23 20:49 CEST
+"EdgeCases.FractionOverFraction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/19 Testing: EdgeCases.ComplexSumCancellationToZero
+19/19 Test: EdgeCases.ComplexSumCancellationToZero
+Command: "/Users/rasat1/Documents/code/spinor_algebra/build/spinor_tests" "--gtest_filter=EdgeCases.ComplexSumCancellationToZero" "--gtest_also_run_disabled_tests"
+Directory: /Users/rasat1/Documents/code/spinor_algebra/build
+"EdgeCases.ComplexSumCancellationToZero" start time: Sep 23 20:49 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = EdgeCases.ComplexSumCancellationToZero
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from EdgeCases
+[ RUN      ] EdgeCases.ComplexSumCancellationToZero
+[       OK ] EdgeCases.ComplexSumCancellationToZero (0 ms)
+[----------] 1 test from EdgeCases (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"EdgeCases.ComplexSumCancellationToZero" end time: Sep 23 20:49 CEST
+"EdgeCases.ComplexSumCancellationToZero" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 23 20:49 CEST

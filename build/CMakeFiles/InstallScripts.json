@@ -1,10 +1,10 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/rasat1/Documents/code/projects/spinor_algebra/build/cmake_install.cmake",
-		"/Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-build/cmake_install.cmake",
-		"/Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-build/googlemock/cmake_install.cmake",
-		"/Users/rasat1/Documents/code/projects/spinor_algebra/build/_deps/googletest-build/googletest/cmake_install.cmake"
+		"/Users/rasat1/Documents/code/spinor_algebra/build/cmake_install.cmake",
+		"/Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-build/cmake_install.cmake",
+		"/Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/rasat1/Documents/code/spinor_algebra/build/_deps/googletest-build/googletest/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

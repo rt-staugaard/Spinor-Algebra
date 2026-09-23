@@ -54,10 +54,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rasat1/Documents/code/projects/spinor_algebra
+CMAKE_SOURCE_DIR = /Users/rasat1/Documents/code/spinor_algebra
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rasat1/Documents/code/projects/spinor_algebra/build
+CMAKE_BINARY_DIR = /Users/rasat1/Documents/code/spinor_algebra/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -155,14 +155,14 @@ CMakeFiles/spinor_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gt
 CMakeFiles/spinor_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spinor_tests.dir/build.make CMakeFiles/spinor_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spinor_tests.dir/build.make CMakeFiles/spinor_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=9,10 "Built target spinor_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=9,10 "Built target spinor_tests"
 .PHONY : CMakeFiles/spinor_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/spinor_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/spinor_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 0
 .PHONY : CMakeFiles/spinor_tests.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ spinor_tests: CMakeFiles/spinor_tests.dir/rule
 # codegen rule for target.
 CMakeFiles/spinor_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spinor_tests.dir/build.make CMakeFiles/spinor_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=9,10 "Finished codegen for target spinor_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=9,10 "Finished codegen for target spinor_tests"
 .PHONY : CMakeFiles/spinor_tests.dir/codegen
 
 # clean rule for target.
@@ -187,14 +187,14 @@ CMakeFiles/spinor_tests.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=1,2 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -204,7 +204,7 @@ gmock: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=1,2 "Finished codegen for target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=1,2 "Finished codegen for target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
@@ -220,14 +220,14 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -237,7 +237,7 @@ gmock_main: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=3,4 "Finished codegen for target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=3,4 "Finished codegen for target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
@@ -252,14 +252,14 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=5,6 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -269,7 +269,7 @@ gtest: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=5,6 "Finished codegen for target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=5,6 "Finished codegen for target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
@@ -284,14 +284,14 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles 0
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -301,7 +301,7 @@ gtest_main: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/rule
 # codegen rule for target.
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/projects/spinor_algebra/build/CMakeFiles --progress-num=7,8 "Finished codegen for target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rasat1/Documents/code/spinor_algebra/build/CMakeFiles --progress-num=7,8 "Finished codegen for target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.

@@ -51,6 +51,7 @@ struct Node {
         return false;
     }
 
+    // COMPARISION WITHOUT SCALAR
     bool operator==(const Node& other) const {
         if (optype != other.optype || payload != other.payload) return false;
         if (children.size() != other.children.size()) return false;
@@ -66,6 +67,17 @@ struct Node {
     }
 };
 
+// COMPARISON WITH SCALAR
+bool is_equal(NodePtr node1, NodePtr node2){
+    if (node1->optype != node2->optype || node1->payload != node2->payload) return false;
+    if (node1->children.size() != node2->children.size()) return false;
+
+    for (int k = 0; k < node1->children.size(); ++k){
+        if (*node1->children[k] != *node2->children[k] || node1->children[k]->scalar != node2->children[k]->scalar) return false;
+    }
+    return true;
+}
+
 class Expression {
 public:
     NodePtr node_ptr;
@@ -75,7 +87,6 @@ public:
         auto scalar_node = std::make_shared<Node>();
         scalar_node->optype = OpType::Scalar;
         scalar_node->scalar = val;
-
         node_ptr = scalar_node;
     }
 
@@ -89,7 +100,7 @@ public:
         else {
             new_node->optype = OpType::Single;
             Spinor spinor(type, i, j);
-            if (j > i){
+            if (i > j){
                 new_node->scalar *= -1;
                 spinor.i = j;
                 spinor.j = i;
@@ -111,31 +122,156 @@ public:
     void print(std::ostream& os) const; 
 };
 
-static Expression singlet(char type, int i, int j){
-    if (i == j) return Expression(0.0);
+static Expression make_sum(std::vector<Expression> terms);
+static Expression make_product(std::vector<Expression> terms);
+static Expression make_fraction(Expression numerator, Expression denominator);
+Expression distribute_sum(Expression ex1, Expression ex2);
 
-    double factor = 1.0;
-    if (i > j){
-        factor *= -1.0;
-        std::swap(i,j);
+Expression single_node_to_expression(const NodePtr& node, double scalar = 1.0){
+    auto new_node = std::make_shared<Node>();
+    new_node->optype = node->optype;
+    new_node->scalar = scalar * node->scalar;
+    new_node->payload = node->payload;
+    new_node->children = node->children;
+
+    return Expression(new_node);
+}
+
+Expression vector_node_to_sum(const std::vector<NodePtr>& children, double scalar = 1.0){
+    if (children.size() == 0) return Expression(0.0);
+    
+    if (children.size() == 1){
+        return single_node_to_expression(children[0], scalar);
+    }
+    
+    auto new_node = std::make_shared<Node>();
+    new_node->optype = OpType::Sum;
+    new_node->scalar = scalar;
+    new_node->children = children;
+
+    return Expression(new_node);
+}
+
+Expression vector_node_to_product(const std::vector<NodePtr>& children, double scalar = 1.0){
+    if (children.size() == 0) return Expression(0.0);
+
+    if (children.size() == 1){
+        return single_node_to_expression(children[0], scalar);
     }
 
-    auto singlet_node = std::make_shared<Node>();
-    singlet_node->optype = OpType::Single;
-    singlet_node->scalar = factor;
-    singlet_node->payload = Spinor(type, i, j);
+    auto new_node = std::make_shared<Node>();
+    new_node->optype = OpType::Product;
+    new_node->scalar = scalar;
+    new_node->children = children;
 
-    return Expression(singlet_node);
+    return Expression(new_node);
+}
+
+Expression nodes_to_fraction(const NodePtr num, const NodePtr den,  double scalar = 1.0){
+    Expression numerator = single_node_to_expression(num, scalar);
+    Expression denominator = single_node_to_expression(den);
+
+    auto new_node = std::make_shared<Node>();
+    new_node->optype = OpType::Fraction;
+    new_node->scalar = scalar;
+    new_node->children = {numerator.node_ptr, denominator.node_ptr};
+
+    return Expression(new_node);
+}
+
+NodePtr normalize(const NodePtr node){
+    auto new_node = std::make_shared<Node>();
+    new_node->optype = node->optype;
+    new_node->scalar = 1.0;
+    new_node->payload = node->payload;
+    new_node->children = node->children;
+
+    return new_node;
+}
+
+
+void collect_sums(std::vector<NodePtr> &nodes, std::vector<NodePtr> &adders){
+
+    std::sort(nodes.begin(), nodes.end(), 
+            [](const NodePtr& a, const NodePtr& b) {
+                return *a < *b;
+        }
+    );
+
+    double scalar = 0.0;
+    for (int i = 0; i < nodes.size(); ++i){
+        auto node = nodes[i];
+
+        if (i + 1 < nodes.size()){
+            auto next_node = nodes[i + 1];
+
+            if (*node == *next_node){
+                scalar += node->scalar;
+                continue;
+            }
+        }
+
+        double total_scalar = scalar + node->scalar;
+        if (total_scalar != 0.0) {
+            auto unit_node = normalize(node);
+            auto new_node = single_node_to_expression(unit_node, total_scalar).node_ptr;
+            adders.push_back(new_node);
+        }
+        scalar = 0.0;
+    } 
+}
+
+void collect_fraction_sums(std::vector<NodePtr> &nodes, std::vector<NodePtr> &adders){
+    if (nodes.empty()) return;
+
+    std::sort(nodes.begin(), nodes.end(), 
+            [](const NodePtr& a, const NodePtr& b) {
+                return *a->children[1] < *b->children[1];
+        }
+    );
+
+    std::vector<NodePtr> same_denominator;
+    for (int i = 0; i < nodes.size(); ++i){
+        auto denominator = nodes[i]->children[1];
+
+        if (i + 1 < nodes.size()){
+            auto next_denominator = nodes[i + 1]->children[1];
+
+            if (*denominator == *next_denominator){
+                auto numerator = single_node_to_expression(nodes[i]->children[0], 1.0);
+                same_denominator.push_back(numerator.node_ptr);
+                continue;
+            }
+        }
+
+        if (!same_denominator.empty()){
+            auto numerator = single_node_to_expression(nodes[i]->children[0], 1.0);
+            same_denominator.push_back(numerator.node_ptr);
+
+            std::vector<NodePtr> simplified;
+            collect_sums(same_denominator, simplified);
+            if (!simplified.empty()){
+                auto num_node = vector_node_to_sum(simplified).node_ptr;
+                auto fraction = nodes_to_fraction(num_node, denominator);
+                adders.push_back(fraction.node_ptr);
+            }
+            same_denominator.clear();
+        }
+        else{
+            adders.push_back(nodes[i]);
+        }
+    }
 }
 
 static Expression make_sum(std::vector<Expression> terms){
-    auto sum_node = std::make_shared<Node>();
-    sum_node->optype = OpType::Sum;
-    std::vector<NodePtr> flat_nodes;
+    if (terms.size() == 0) return Expression(0.0);
 
-    for (auto& t : terms){
-        auto node = t.node_ptr;
-        if (!node || (node->optype == OpType::Scalar && node->scalar == 0.0)) continue;
+    std::vector<NodePtr> flat_nodes;
+    std::vector<NodePtr> frac_nodes;
+
+    for (size_t i = 0; i < terms.size(); ++i){
+        auto node = terms[i].node_ptr;
+        if (!node || node->scalar == 0.0) continue;
 
         if (node->optype == OpType::Sum){
 
@@ -144,120 +280,194 @@ static Expression make_sum(std::vector<Expression> terms){
                 scaled_child->scalar *= node->scalar;
                 flat_nodes.push_back(scaled_child);
             }
-            
         }
-        else{
+        else if (node->optype == OpType::Fraction){
+            frac_nodes.push_back(node);
+        }
+        else {
             flat_nodes.push_back(node);
         }
     }
 
-    if (flat_nodes.empty()) return Expression(0.0);
-
-    std::sort(flat_nodes.begin(), flat_nodes.end(), 
-        [](const NodePtr& a, const NodePtr& b) {
-            if (*a != *b) {
-                return *a < *b;
-            }
-            return a->scalar < b->scalar;
-        }
-    );
-
     std::vector<NodePtr> adders;
-    double scalar = 0.0;
-    for (int i = 0; i < flat_nodes.size(); ++i){
-        auto node = flat_nodes[i];
-
-        if (i + 1 < flat_nodes.size()){
-            auto next_node = flat_nodes[i + 1];
-
-            if (*node == *next_node){
-                scalar += node->scalar;
-                continue;
-            }
-        }
-
-        auto new_node = std::make_shared<Node>(*node);
-        new_node->scalar += scalar;
-
-        if (new_node->scalar != 0.0){
-            adders.push_back(new_node);
-        }
-        scalar = 0.0;
-    } 
+    if (!flat_nodes.empty()){
+        collect_sums(flat_nodes, adders);
+    }
     
-    if (adders.empty()) return Expression(0.0);
-
-    sum_node->children = adders;
-
-    if (sum_node->children.size() == 1){
-        auto new_node = std::make_shared<Node>();
-        new_node->optype = sum_node->children[0]->optype;
-        new_node->scalar = sum_node->children[0]->scalar;
-        new_node->payload = sum_node->children[0]->payload;
-        new_node->children = sum_node->children[0]->children;
-
-        return Expression(new_node);        
+    std::vector<NodePtr> frac_adders;
+    if (!frac_nodes.empty()){
+        collect_fraction_sums(frac_nodes, frac_adders);
+    }
+    else {
+        return vector_node_to_sum(adders);
     }
 
-    return Expression(sum_node);
+    Expression numerator = vector_node_to_sum(adders);
+    Expression denominator = Expression(1.0);
+    for (size_t i = 0; i < frac_adders.size(); ++i){
+        numerator = distribute_sum(Expression(frac_adders[i]->children[1]), numerator);
+        numerator = make_sum({Expression(frac_adders[i]->children[0]), numerator});
+        denominator = make_product({Expression(frac_adders[i]->children[1]), denominator});
+    }
+
+    return make_fraction(numerator, denominator); 
 }
+
+Expression distribute_sum(Expression ex1, Expression ex2){
+    auto n1 = ex1.node_ptr;
+    auto n2 = ex2.node_ptr;
+
+    if (!n1 || !n2) return Expression(0.0);
+
+    if (n1->optype == OpType::Sum && n2->optype == OpType::Sum) {
+        std::vector<Expression> combined_terms;
+        for (auto& child1 : n1->children) {
+            for (auto& child2 : n2->children) {
+                combined_terms.push_back(make_product({Expression(child1), Expression(child2)}));
+            }
+        }
+        return make_sum(combined_terms);
+    }
+
+    if (n1->optype == OpType::Sum) {
+        std::vector<Expression> combined_terms;
+        for (auto& child1 : n1->children) {
+            combined_terms.push_back(make_product({Expression(child1), ex2}));
+        }
+        return make_sum(combined_terms);
+    }
+
+    if (n2->optype == OpType::Sum) {
+        return distribute_sum(ex2, ex1);
+    }
+
+    return make_product({ex1, ex2});
+}
+
+
+void reduce_factors(std::vector<NodePtr>& num_list, std::vector<NodePtr>& den_list) {
+    if (num_list.size() == 0) return;
+
+    for (auto it_num = num_list.begin(); it_num != num_list.end(); ) {
+        bool erased = false;
+        
+        for (auto it_den = den_list.begin(); it_den != den_list.end(); ++it_den) {
+            if (is_equal(*it_num, *it_den)) {
+                
+                it_num = num_list.erase(it_num);
+                
+                den_list.erase(it_den);
+                
+                erased = true;
+                break; 
+            }
+        }
+        
+        if (!erased) {
+            ++it_num;
+        }
+    }
+}
+
+void extract_factors(const NodePtr& node, std::vector<NodePtr>& factors) {
+    if (!node || node->optype == OpType::Scalar) return;
+
+    if (node->optype == OpType::Product) {
+        for (const auto& child : node->children) {
+            extract_factors(child, factors); 
+        }
+    } 
+    else {
+        auto unit_factor = std::make_shared<Node>(*node);
+        unit_factor->scalar = 1.0; 
+        factors.push_back(unit_factor);
+    }
+}
+
+void reduce_fraction(NodePtr& numerator, NodePtr& denominator){
+
+    std::vector<NodePtr> num_factors;
+    extract_factors(numerator, num_factors);
+
+    std::vector<NodePtr> den_factors;
+    extract_factors(denominator, den_factors);
+
+    if (!num_factors.empty() && !den_factors.empty()){
+        reduce_factors(num_factors, den_factors);
+    }
+
+    Expression new_num = vector_node_to_product(num_factors, numerator->scalar);
+    Expression new_den = vector_node_to_product(den_factors, denominator->scalar);
+
+    numerator = new_num.node_ptr;
+    denominator = new_den.node_ptr;
+}
+
 
 static Expression make_product(std::vector<Expression> terms){
     if (terms.size() == 0) return Expression(0.0);
 
+    std::vector<NodePtr> factors;
+    std::vector<NodePtr> sum_factors;
+    std::vector<NodePtr> division_factors;
+
+    double total_factor = 1.0;
     for (size_t i = 0; i < terms.size(); ++i){
-        if (!terms[i].node_ptr) return Expression(0.0);
+        auto node = terms[i].node_ptr;
+        if (!node || node->scalar == 0.0) return Expression(0.0);
+        
+        total_factor *= node->scalar;
+        OpType type = node->optype;
+        switch (type) {
+            case OpType::Scalar:{
+                break;
+            }
 
-        if (terms[i].node_ptr->optype == OpType::Sum){
-            auto sum_node = terms[i].node_ptr;
-            std::vector<Expression> expanded_terms;
+            case OpType::Single:{
+                auto unit_node = normalize(node);
+                factors.push_back(unit_node);
+                break;
+            }
 
-            for(auto& child : sum_node->children){
-                std::vector<Expression> sub_factors;
-                for (size_t j = 0; j < terms.size(); ++j){
-                    if (i == j){
-                        sub_factors.push_back(Expression(child));
-                    }
-                    else{
-                        sub_factors.push_back(terms[j]);
+            case OpType::Product:{
+                for (auto &child : node->children){
+                    total_factor *= child->scalar;
+                    auto unit_child = normalize(child);
+                    factors.push_back(unit_child);
+                }
+                break;
+            }
+
+            case OpType::Sum:{
+                auto unit_sum = normalize(node);
+                sum_factors.push_back(unit_sum);
+                break;
+            }
+
+            case OpType::Fraction:{
+                OpType num_type = node->children[0]->optype;
+                auto unit_frac = normalize(node);
+
+                if (num_type == OpType::Single){
+                    factors.push_back(unit_frac->children[0]);
+                }
+                else if (num_type == OpType::Product){
+                    for (auto& c : unit_frac->children[0]->children){
+                        total_factor *= c->scalar;
+                        factors.push_back(normalize(c));
                     }
                 }
-                expanded_terms.push_back(make_product(sub_factors));
-            }
+                else if (num_type == OpType::Sum){
+                    sum_factors.push_back(unit_frac->children[0]);
+                }
 
-            return make_sum(expanded_terms);
-        }
-    }
-
-    std::vector<NodePtr> products;
-    
-    double total_factor = 1.0; 
-    for(auto &t : terms){
-        auto node = t.node_ptr;
-        total_factor *= t.node_ptr->scalar;
-        
-        if (total_factor == 0.0) return Expression(0.0);
-
-        if (node->optype == OpType::Product){
-            for (auto &child : node->children){
-                auto unit_child = std::make_shared<Node>(*child);
-                unit_child->scalar = 1.0;
-                products.push_back(unit_child);
+                division_factors.push_back(unit_frac->children[1]);
+                break;
             }
         }
-
-        else if(node->optype != OpType::Scalar){
-            auto unit_node = std::make_shared<Node>(*node);
-            unit_node->scalar = 1.0;
-            products.push_back(unit_node); 
-        }
     }
 
-    if (products.empty()) {
-        return Expression(total_factor);
-    }
-
-    std::sort(products.begin(), products.end(), 
+    std::sort(factors.begin(), factors.end(), 
         [](const NodePtr& a, const NodePtr& b) {
             if (*a != *b) {
                 return *a < *b;
@@ -266,24 +476,47 @@ static Expression make_product(std::vector<Expression> terms){
         }
     );
 
-    if (products.size() == 1) {
-        auto result_node = std::make_shared<Node>(*products[0]);
-        result_node->scalar *= total_factor;
-        return Expression(result_node);
+    if (!division_factors.empty()){
+        reduce_factors(factors, division_factors);
+        reduce_factors(sum_factors, division_factors);
     }
 
-    auto product_node = std::make_shared<Node>();
-    product_node->optype = OpType::Product;
-    product_node->scalar = total_factor;
-    product_node->children = products;
+    if (division_factors.empty() && sum_factors.empty()){
+        return vector_node_to_product(factors, total_factor);
+    }
 
-    return Expression(product_node);
+    Expression numerator = Expression(total_factor);
+    if (!factors.empty()){
+        numerator = vector_node_to_product(factors, total_factor);
+    }
+
+    for (auto& s : sum_factors) {
+        numerator = distribute_sum(numerator, Expression(s));
+    }
+    
+    if(division_factors.empty()){
+        return numerator;
+    }
+    
+    auto denominator = vector_node_to_product(division_factors);
+
+    return make_fraction(numerator, denominator);
 }
+
 
 static Expression make_fraction(Expression numerator, Expression denominator){
 
-    if(denominator.node_ptr->optype == OpType::Scalar && denominator.node_ptr->scalar == 0.0) {
-        throw std::invalid_argument("Undefined behaviour: Cannot divide by zero.");
+    if(denominator.node_ptr->optype == OpType::Scalar) {
+        if (denominator.node_ptr->scalar == 0.0){
+            throw std::invalid_argument("Undefined behaviour: Cannot divide by zero.");
+        }
+        else {
+            auto node = std::make_shared<Node>();
+            node->optype =numerator.node_ptr->optype;
+            node->scalar = numerator.node_ptr->scalar / denominator.node_ptr->scalar;
+            node->children = numerator.node_ptr->children;
+            return Expression(node);
+        }
     }
     if (numerator.node_ptr->optype == OpType::Scalar && numerator.node_ptr->scalar == 0.0) return Expression(0.0);
 
@@ -292,42 +525,44 @@ static Expression make_fraction(Expression numerator, Expression denominator){
 
     if (*num_node == *den_node) return Expression(1.0);
 
-    if (num_node->optype == OpType::Fraction){
-        Expression new_den = make_product({Expression(num_node->children[1]), denominator});
-        return make_fraction(Expression(num_node->children[0]), new_den);
+    if (num_node->optype == OpType::Fraction) {
+        Expression n1 = single_node_to_expression(num_node->children[0], num_node->scalar);
+        Expression d1 = Expression(num_node->children[1]); 
+
+        Expression new_den = make_product({d1, denominator});
+        return make_fraction(n1, new_den);
     }
 
-    if (den_node->optype == OpType::Fraction){
-        Expression new_num = make_product({numerator, Expression(den_node->children[1])});
-        return make_fraction(new_num, denominator);
+    if (den_node->optype == OpType::Fraction) {
+        Expression n2 = single_node_to_expression(den_node->children[0], den_node->scalar);
+        Expression d2 = Expression(den_node->children[1]); 
+
+        Expression new_num = make_product({numerator, d2});
+        return make_fraction(new_num, n2);
     }
 
-    auto frac_node = std::make_shared<Node>();
-    frac_node->optype = OpType::Fraction;
-    frac_node->scalar = num_node->scalar / den_node->scalar;
+    double overall_scalar = num_node->scalar / den_node->scalar;
+    num_node = normalize(num_node);
+    den_node = normalize(den_node);
 
-    auto n_num = std::make_shared<Node>(*num_node); 
-    n_num->scalar = 1.0;
+    reduce_fraction(num_node, den_node);
 
-    auto n_den = std::make_shared<Node>(*den_node); 
-    n_den->scalar = 1.0;
+    if (den_node->optype == OpType::Scalar) {
+        return single_node_to_expression(num_node, overall_scalar);
+    }
 
-    frac_node->children = {n_num, n_den};
-
-    return Expression(frac_node);
+    return nodes_to_fraction(num_node, den_node, overall_scalar);
 }
+
+
 
 Expression Expression::operator+(const Expression& other) const {
     return make_sum({*this, other});
 }
 
 Expression Expression::operator-(const Expression& other) const {
-    auto neg_node = std::make_shared<Node>();
-    neg_node->optype = other.node_ptr->optype;
-    neg_node->scalar = -other.node_ptr->scalar;
-    neg_node->payload = other.node_ptr->payload;
-    neg_node->children = other.node_ptr->children;
-    return make_sum({*this, Expression(neg_node)});
+    auto negative_expression = single_node_to_expression(other.node_ptr, -1.0);
+    return make_sum({*this, negative_expression});
 }
 
 Expression Expression::operator*(const Expression& other) const {
